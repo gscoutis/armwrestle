@@ -53,9 +53,9 @@ local Window = Rayfield:CreateWindow({
  local Toggle = Tab:CreateToggle({
     Name = "claim event egg",
     CurrentValue = false,
-    Flag = "summer", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Flag = "summeregg", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(bool)
-        getgenv().click = bool
+        getgenv().event = bool
         claimevent()
     end,
  })
