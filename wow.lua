@@ -1,5 +1,5 @@
 getgenv().click = false;
-getgenv().bosses = false;
+getgenv().bosses = false; -- test
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
     Name = "CensoriHub",
