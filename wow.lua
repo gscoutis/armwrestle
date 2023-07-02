@@ -39,8 +39,9 @@ local Window = Rayfield:CreateWindow({
     -- The variable (Value) is a boolean on whether the toggle is true or false
     end,
  })
+ local Section = Tab:CreateSection("Summer Autofarm")
  local Toggle = Tab:CreateToggle({
-    Name = "Summer Egg Farm (use autocklicker)",
+    Name = "Farm, use autoclicker (farms last 2 bosses in 2nd world)",
     CurrentValue = false,
     Flag = "summer", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(bool)
