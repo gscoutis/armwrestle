@@ -1,5 +1,6 @@
 getgenv().click = false;
 getgenv().bosses = false; -- test
+getgenv().event = false;
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
     Name = "CensoriHub",
@@ -49,7 +50,15 @@ local Window = Rayfield:CreateWindow({
         summer()
     end,
  })
-
+ local Toggle = Tab:CreateToggle({
+    Name = "claim event egg",
+    CurrentValue = false,
+    Flag = "summer", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(bool)
+        getgenv().click = bool
+        claimevent()
+    end,
+ })
 
 function clicker()
     spawn(function()
@@ -86,3 +95,12 @@ function summer()
 end)
 end
 
+function claimevent()
+    spawn(function()
+        while event == true do 
+            game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("EventService"):WaitForChild("RF"):WaitForChild("ClaimEgg"):InvokeServer()
+            wait(1)
+    
+    end
+    end)
+end
