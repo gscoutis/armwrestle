@@ -2,8 +2,8 @@ getgenv().click = false;
 getgenv().bosses = false;
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "153 sunset st dumont njj",
-    LoadingTitle = "made for andrew ",
+    Name = "CensoriHub",
+    LoadingTitle = "Join discord for key",
     LoadingSubtitle = "by ",
     ConfigurationSaving = {
        Enabled = false,
@@ -26,10 +26,10 @@ local Window = Rayfield:CreateWindow({
        Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
     }
  })
- local Tab = Window:CreateTab("liam is bitch", 4483362458) -- Title, Image
+ local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 
  local Toggle = Tab:CreateToggle({
-    Name = "auto click",
+    Name = "Autoclicker",
     CurrentValue = false,
     Flag = "autoclick", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(bool)
@@ -40,7 +40,7 @@ local Window = Rayfield:CreateWindow({
     end,
  })
  local Toggle = Tab:CreateToggle({
-    Name = "auto do summer egg",
+    Name = "Summer Egg Farm (use autocklicker)",
     CurrentValue = false,
     Flag = "summer", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(bool)
